@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/shared/material.module';
-import { MenuComponent } from './core/menu/menu.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { MenuComponent } from './core/menu/menu.component';
 import { HomePageComponent } from './home-page/home-page/home-page.component';
 
 @NgModule({
@@ -14,15 +14,15 @@ import { HomePageComponent } from './home-page/home-page/home-page.component';
     AppComponent,
     MenuComponent,
     FooterComponent,
-    HomePageComponent
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

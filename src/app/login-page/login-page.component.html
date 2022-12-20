@@ -1,0 +1,48 @@
+<div
+  class="d-flex flex-column align-items-sm-stretch align-items-md-center justify-content-center h-100 px-4"
+>
+  <!-- <h1 class="d-flex align-self-center position-absolute top-0 pt-8">
+    ABADÁ-Capoeira Pouso Alegre
+  </h1> -->
+  <mat-card class="d-flex flex-column align-items-stretch">
+    <form>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content
+        class="d-flex flex-column align-items-stretch justify-content-center"
+      >
+        <mat-form-field>
+          <mat-label>email</mat-label>
+          <input
+            matInput
+            type="email"
+            [(ngModel)]="email"
+            required
+            name="email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>senha</mat-label>
+          <input
+            matInput
+            type="password"
+            [(ngModel)]="password"
+            required
+            name="password"
+          />
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions
+        class="d-flex align-items-center justify-content-center"
+      >
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="logar()"
+        >
+          Entrar
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
