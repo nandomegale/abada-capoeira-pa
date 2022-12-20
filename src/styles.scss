@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+//https://coolors.co/6f1d1b-bb9457-432818-99582a-ffe6a7
+@use "@angular/material" as mat;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
+
+@include mat.core();
+
+$primary-palette: (
+  50: #965936,
+  100: #875031,
+  200: #78472b,
+  300: #693e26,
+  400: #5a3620,
+  500: #432818,
+  600: #3c2416,
+  700: #2d1b10,
+  800: #1e120b,
+  900: #0f0905,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    900: white,
+  ),
+);
+
+$accent-palette: (
+  50: #dcc8a8,
+  100: #d6bf9a,
+  200: #d0b58b,
+  300: #caac7d,
+  400: #c4a36e,
+  500: #bb9457,
+  600: #b89151,
+  700: #ae8647,
+  800: #9f7b41,
+  900: #91703b,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    900: white,
+  ),
+);
+
+$warn-palette: (
+  50: #c53230,
+  100: #b52e2c,
+  200: #a42a28,
+  300: #942624,
+  400: #832120,
+  500: #6f1d1b,
+  600: #631918,
+  700: #521514,
+  800: #421110,
+  900: #310d0c,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    900: white,
+  ),
+);
+
+$abada-capoeira-pa-front-primary: mat.define-palette($primary-palette);
+$abada-capoeira-pa-front-accent: mat.define-palette($accent-palette);
+$abada-capoeira-pa-front-warn: mat.define-palette($warn-palette);
+
+$abada-capoeira-pa-front-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $abada-capoeira-pa-front-primary,
+      accent: $abada-capoeira-pa-front-accent,
+      warn: $abada-capoeira-pa-front-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($abada-capoeira-pa-front-theme);
+
+:root {
+  --primary-color: #432818;
+  --accent-color: #bb9457;
+  --warn-color: #6f1d1b;
+  --bg-color: #ffe6a7;
+  --secondary-color: #99582a;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

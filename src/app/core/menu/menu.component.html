@@ -1,0 +1,25 @@
+<mat-toolbar
+  color="primary"
+  class="d-flex align-items-center justify-content-between"
+>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    matTooltip="menu"
+    aria-label="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="mat-menu-custom">
+    <button mat-menu-item class="mat-menu-item-custom">Página inicial</button>
+    <button mat-menu-item class="mat-menu-item-custom">Histórias</button>
+    <button mat-menu-item class="mat-menu-item-custom">Músicas</button>
+    <button mat-menu-item class="mat-menu-item-custom">Toques</button>
+    <button mat-menu-item class="mat-menu-item-custom">Golpes</button>
+    <button mat-menu-item class="mat-menu-item-custom">Graduações</button>
+  </mat-menu>
+  <span>ABADÁ-Capoeira Pouso Alegre</span>
+  <button mat-icon-button matTooltip="sair" aria-label="sair">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
