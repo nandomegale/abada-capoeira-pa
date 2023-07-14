@@ -15,20 +15,26 @@
           <input
             matInput
             type="email"
-            [(ngModel)]="email"
+            [formControl]="email"
             required
             name="email"
           />
+          <mat-error *ngIf="email.invalid">{{
+            getEmailErrorMessage()
+          }}</mat-error>
         </mat-form-field>
         <mat-form-field>
           <mat-label>senha</mat-label>
           <input
             matInput
             type="password"
-            [(ngModel)]="password"
+            [formControl]="password"
             required
             name="password"
           />
+          <mat-error *ngIf="password.invalid">{{
+            getPasswordErrorMessage()
+          }}</mat-error>
         </mat-form-field>
       </mat-card-content>
       <mat-card-actions
@@ -38,6 +44,7 @@
           mat-raised-button
           color="primary"
           type="submit"
+          [disabled]="email.invalid || password.invalid"
           (click)="logar()"
         >
           Entrar
